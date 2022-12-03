@@ -28,15 +28,15 @@ public class CommentEntity {
 
     @JoinColumn(nullable = false, name = "profile_id")
     @ManyToOne(targetEntity = ProfileEntity.class, fetch = FetchType.LAZY)
-    private ProfileEntity profileEntity;
+    private ProfileEntity profile;
 
     @JoinColumn(nullable = false, name = "article_id")
     @ManyToOne(targetEntity = HomeEntity.class, fetch = FetchType.LAZY)
-    private HomeEntity articleEntity;
+    private HomeEntity home;
 
     @JoinColumn(name = "comment_id")
     @ManyToOne(targetEntity = CommentEntity.class, fetch = FetchType.LAZY)
-    private CommentEntity commentEntity;
+    private CommentEntity comment;
 
     @Column(nullable = false)
     private String content;

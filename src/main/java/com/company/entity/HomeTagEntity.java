@@ -26,7 +26,7 @@ public class HomeTagEntity {
 
     @JoinColumn(name = "article_id", nullable = false)
     @OneToOne(targetEntity = HomeEntity.class)
-    private HomeEntity article;
+    private HomeEntity home;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)

@@ -1,5 +1,6 @@
 package com.company.entity;
 
+import com.company.enums.BuildStatus;
 import com.company.enums.HomeStatus;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,13 +24,6 @@ public class HomeEntity {
     @Column(name = "content")
     private String content;
 
-    @Column(name = "location_id")
-    private Integer location_id;
-
-    @JoinColumn(name = "location_id", nullable = false, updatable = false, insertable = false)
-    @OneToMany
-    private LocationEntity location;
-
     @Column(name = "phone_number")
     private String phoneNumber;
 
@@ -50,10 +44,23 @@ public class HomeEntity {
     @Column(nullable = false, name = "created_date")
     private LocalDateTime createdDate = LocalDateTime.now();
 
-    
+    @Column(nullable = false)
+    private Double area;
 
+    @Column(nullable = false)
+    private Double summa;
 
+    @Column(nullable = false)
+    private Integer countRoom;
 
+    @Column(nullable = false)
+    private Integer floor;
 
+    @Column(nullable = false)
+    private Integer totalFloor;
+
+    @Column(nullable = false)
+    @Enumerated(value = EnumType.STRING)
+    private BuildStatus buildStatus;
 
 }

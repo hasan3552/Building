@@ -28,4 +28,12 @@ public class LocationEntity {
 
     @Column(name = "visible")
     private Boolean visible = Boolean.TRUE;
+
+    @Column(name = "home_id")
+    private String home_id;
+
+    @JoinColumn(name = "home_id", nullable = false, updatable = false, insertable = false)
+    @OneToOne
+    private HomeEntity home;
+
 }
