@@ -1,0 +1,14 @@
+
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAUJKFKLA2CMOW3YZF
+      secret-key: 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
+    region:
+      static: ap-northeast-1
+    stack:
+      auto: false
+
+application:
+  bucket:
+    name: buildinghasan

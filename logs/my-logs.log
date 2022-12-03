@@ -1,0 +1,500 @@
+2022-12-03 11:37:23 [34mINFO [0;39m - com.company.Building2Application  - Starting Building2Application using Java 17.0.2 on DESKTOP-2SB376K with PID 14940 (A:\JAVA OWNER PROJECT\Building2\target\classes started by hasan in A:\JAVA OWNER PROJECT\Building2)
+2022-12-03 11:37:23 [34mINFO [0;39m - com.company.Building2Application  - The following 1 profile is active: "dev"
+2022-12-03 11:37:25 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-03 11:37:26 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 288 ms. Found 3 JPA repository interfaces.
+2022-12-03 11:37:28 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8081 (http)
+2022-12-03 11:37:28 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-12-03 11:37:28 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-03 11:37:28 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-12-03 11:37:28 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 4813 ms
+2022-12-03 11:37:28 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-03 11:37:28 [34mINFO [0;39m - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-12-03 11:37:29 [34mINFO [0;39m - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-03 11:37:29 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-12-03 11:37:29 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-12-03 11:37:29 [34mINFO [0;39m - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-12-03 11:37:30 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-12-03 11:37:32 [31mWARN [0;39m - org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 0, SQLState: 00000
+2022-12-03 11:37:32 [31mWARN [0;39m - org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - constraint "uk_rc7r62u5tals0tl5rkeyyo5sb" of relation "profile" does not exist, skipping
+2022-12-03 11:37:32 [31mWARN [0;39m - org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 0, SQLState: 00000
+2022-12-03 11:37:32 [31mWARN [0;39m - org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - constraint "uk_m6d18xu2ayccqmcgsrf2h0xql" of relation "sms" does not exist, skipping
+2022-12-03 11:37:32 [31mWARN [0;39m - org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 0, SQLState: 00000
+2022-12-03 11:37:32 [31mWARN [0;39m - org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - constraint "uk_ox3dr9jxccjygx1lyxqmo7aae" of relation "sms" does not exist, skipping
+2022-12-03 11:37:32 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-03 11:37:32 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:37:33 [31mWARN [0;39m - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-03 11:37:33 [31mWARN [0;39m - org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'storageService': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'application.bucket.name' in value "${application.bucket.name}"
+2022-12-03 11:37:33 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:37:33 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-12-03 11:37:33 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-12-03 11:37:33 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Stopping service [Tomcat]
+2022-12-03 11:37:33 [34mINFO [0;39m - org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-03 11:37:33 [1;31mERROR[0;39m - org.springframework.boot.SpringApplication  - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'storageService': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'application.bucket.name' in value "${application.bucket.name}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.company.Building2Application.main(Building2Application.java:10)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'application.bucket.name' in value "${application.bucket.name}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 17 common frames omitted
+2022-12-03 11:38:44 [34mINFO [0;39m - com.company.Building2Application  - Starting Building2Application using Java 17.0.2 on DESKTOP-2SB376K with PID 11828 (A:\JAVA OWNER PROJECT\Building2\target\classes started by hasan in A:\JAVA OWNER PROJECT\Building2)
+2022-12-03 11:38:44 [34mINFO [0;39m - com.company.Building2Application  - The following 1 profile is active: "dev"
+2022-12-03 11:38:45 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-03 11:38:46 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 56 ms. Found 3 JPA repository interfaces.
+2022-12-03 11:38:46 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8081 (http)
+2022-12-03 11:38:46 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-12-03 11:38:46 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-03 11:38:46 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-12-03 11:38:46 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 2028 ms
+2022-12-03 11:38:47 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-03 11:38:47 [34mINFO [0;39m - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-12-03 11:38:47 [34mINFO [0;39m - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-03 11:38:47 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-12-03 11:38:47 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-12-03 11:38:47 [34mINFO [0;39m - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-12-03 11:38:47 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-12-03 11:38:48 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-03 11:38:48 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:38:48 [31mWARN [0;39m - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-03 11:38:48 [31mWARN [0;39m - org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'storageService': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'application.bucket.name' in value "${application.bucket.name}"
+2022-12-03 11:38:48 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:38:48 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-12-03 11:38:48 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-12-03 11:38:48 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Stopping service [Tomcat]
+2022-12-03 11:38:48 [34mINFO [0;39m - org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-03 11:38:49 [1;31mERROR[0;39m - org.springframework.boot.SpringApplication  - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'storageService': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'application.bucket.name' in value "${application.bucket.name}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.company.Building2Application.main(Building2Application.java:10)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'application.bucket.name' in value "${application.bucket.name}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 17 common frames omitted
+2022-12-03 11:39:39 [34mINFO [0;39m - com.company.Building2Application  - Starting Building2Application using Java 17.0.2 on DESKTOP-2SB376K with PID 13568 (A:\JAVA OWNER PROJECT\Building2\target\classes started by hasan in A:\JAVA OWNER PROJECT\Building2)
+2022-12-03 11:39:39 [34mINFO [0;39m - com.company.Building2Application  - The following 1 profile is active: "dev"
+2022-12-03 11:39:40 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-03 11:39:40 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2022-12-03 11:39:40 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8081 (http)
+2022-12-03 11:39:40 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-12-03 11:39:40 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-03 11:39:41 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-12-03 11:39:41 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 1835 ms
+2022-12-03 11:39:41 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-03 11:39:41 [34mINFO [0;39m - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-12-03 11:39:41 [34mINFO [0;39m - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-03 11:39:41 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-12-03 11:39:41 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-12-03 11:39:41 [34mINFO [0;39m - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-12-03 11:39:41 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-12-03 11:39:42 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-03 11:39:42 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:39:42 [31mWARN [0;39m - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-03 11:39:42 [31mWARN [0;39m - org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'storageService': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'application.bucket.name' in value "${application.bucket.name}"
+2022-12-03 11:39:42 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:39:42 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-12-03 11:39:42 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-12-03 11:39:42 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Stopping service [Tomcat]
+2022-12-03 11:39:42 [34mINFO [0;39m - org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-03 11:39:42 [1;31mERROR[0;39m - org.springframework.boot.SpringApplication  - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'storageService': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'application.bucket.name' in value "${application.bucket.name}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.company.Building2Application.main(Building2Application.java:10)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'application.bucket.name' in value "${application.bucket.name}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 17 common frames omitted
+2022-12-03 11:39:59 [34mINFO [0;39m - com.company.Building2Application  - Starting Building2Application using Java 17.0.2 on DESKTOP-2SB376K with PID 10164 (A:\JAVA OWNER PROJECT\Building2\target\classes started by hasan in A:\JAVA OWNER PROJECT\Building2)
+2022-12-03 11:39:59 [34mINFO [0;39m - com.company.Building2Application  - The following 1 profile is active: "dev"
+2022-12-03 11:40:00 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-03 11:40:00 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 50 ms. Found 3 JPA repository interfaces.
+2022-12-03 11:40:01 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8081 (http)
+2022-12-03 11:40:01 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-12-03 11:40:01 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-03 11:40:01 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-12-03 11:40:01 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 1980 ms
+2022-12-03 11:40:01 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-03 11:40:01 [34mINFO [0;39m - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-12-03 11:40:01 [34mINFO [0;39m - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-03 11:40:01 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-12-03 11:40:02 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-12-03 11:40:02 [34mINFO [0;39m - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-12-03 11:40:02 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-12-03 11:40:02 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-03 11:40:02 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:40:03 [31mWARN [0;39m - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-03 11:40:03 [31mWARN [0;39m - org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'storageService': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'application.bucket.name' in value "${application.bucket.name}"
+2022-12-03 11:40:03 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:40:03 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-12-03 11:40:03 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-12-03 11:40:03 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Stopping service [Tomcat]
+2022-12-03 11:40:03 [34mINFO [0;39m - org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-03 11:40:03 [1;31mERROR[0;39m - org.springframework.boot.SpringApplication  - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'storageService': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'application.bucket.name' in value "${application.bucket.name}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.company.Building2Application.main(Building2Application.java:10)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'application.bucket.name' in value "${application.bucket.name}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 17 common frames omitted
+2022-12-03 11:54:39 [34mINFO [0;39m - com.company.Building2Application  - Starting Building2Application using Java 17.0.2 on DESKTOP-2SB376K with PID 1012 (A:\JAVA OWNER PROJECT\Building2\target\classes started by hasan in A:\JAVA OWNER PROJECT\Building2)
+2022-12-03 11:54:39 [34mINFO [0;39m - com.company.Building2Application  - The following 1 profile is active: "dev"
+2022-12-03 11:54:42 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-03 11:54:42 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
+2022-12-03 11:54:43 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8081 (http)
+2022-12-03 11:54:43 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-12-03 11:54:43 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-03 11:54:43 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-12-03 11:54:43 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 3921 ms
+2022-12-03 11:54:44 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-03 11:54:44 [34mINFO [0;39m - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-12-03 11:54:44 [34mINFO [0;39m - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-03 11:54:45 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-12-03 11:54:45 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-12-03 11:54:45 [34mINFO [0;39m - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-12-03 11:54:45 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-12-03 11:54:47 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-03 11:54:47 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:54:47 [31mWARN [0;39m - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-03 11:54:47 [31mWARN [0;39m - org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'storageService': Unsatisfied dependency expressed through field 's3Client'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.amazonaws.services.s3.AmazonS3' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2022-12-03 11:54:47 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:54:47 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-12-03 11:54:47 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-12-03 11:54:47 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Stopping service [Tomcat]
+2022-12-03 11:54:47 [34mINFO [0;39m - org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-03 11:54:47 [1;31mERROR[0;39m - org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter  - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field s3Client in com.company.service.StorageService required a bean of type 'com.amazonaws.services.s3.AmazonS3' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.amazonaws.services.s3.AmazonS3' in your configuration.
+
+2022-12-03 11:55:53 [34mINFO [0;39m - com.company.Building2Application  - Starting Building2Application using Java 17.0.2 on DESKTOP-2SB376K with PID 9620 (A:\JAVA OWNER PROJECT\Building2\target\classes started by hasan in A:\JAVA OWNER PROJECT\Building2)
+2022-12-03 11:55:53 [34mINFO [0;39m - com.company.Building2Application  - The following 1 profile is active: "dev"
+2022-12-03 11:55:55 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-03 11:55:55 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
+2022-12-03 11:55:55 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8081 (http)
+2022-12-03 11:55:55 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-12-03 11:55:55 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-03 11:55:55 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-12-03 11:55:55 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 2022 ms
+2022-12-03 11:55:56 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-03 11:55:56 [34mINFO [0;39m - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-12-03 11:55:56 [34mINFO [0;39m - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-03 11:55:56 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-12-03 11:55:56 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-12-03 11:55:56 [34mINFO [0;39m - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-12-03 11:55:56 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-12-03 11:55:57 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-03 11:55:57 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:55:57 [31mWARN [0;39m - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-03 11:55:57 [31mWARN [0;39m - org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'storageService': Unsatisfied dependency expressed through field 's3Client'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.amazonaws.services.s3.AmazonS3' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2022-12-03 11:55:57 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:55:57 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-12-03 11:55:57 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-12-03 11:55:57 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Stopping service [Tomcat]
+2022-12-03 11:55:57 [34mINFO [0;39m - org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-03 11:55:57 [1;31mERROR[0;39m - org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter  - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field s3Client in com.company.service.StorageService required a bean of type 'com.amazonaws.services.s3.AmazonS3' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.amazonaws.services.s3.AmazonS3' in your configuration.
+
+2022-12-03 11:56:53 [34mINFO [0;39m - com.company.Building2Application  - Starting Building2Application using Java 17.0.2 on DESKTOP-2SB376K with PID 8264 (A:\JAVA OWNER PROJECT\Building2\target\classes started by hasan in A:\JAVA OWNER PROJECT\Building2)
+2022-12-03 11:56:53 [34mINFO [0;39m - com.company.Building2Application  - The following 1 profile is active: "dev"
+2022-12-03 11:56:54 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-03 11:56:55 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
+2022-12-03 11:56:55 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8081 (http)
+2022-12-03 11:56:55 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-12-03 11:56:55 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-03 11:56:55 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-12-03 11:56:55 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 1977 ms
+2022-12-03 11:56:55 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-03 11:56:55 [34mINFO [0;39m - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-12-03 11:56:56 [34mINFO [0;39m - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-03 11:56:56 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-12-03 11:56:56 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-12-03 11:56:56 [34mINFO [0;39m - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-12-03 11:56:56 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-12-03 11:56:57 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-03 11:56:57 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:56:57 [31mWARN [0;39m - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-03 11:56:57 [31mWARN [0;39m - org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'storageService': Unsatisfied dependency expressed through field 's3Client'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.amazonaws.services.s3.AmazonS3' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2022-12-03 11:56:57 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:56:57 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-12-03 11:56:57 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-12-03 11:56:57 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Stopping service [Tomcat]
+2022-12-03 11:56:57 [34mINFO [0;39m - org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-03 11:56:57 [1;31mERROR[0;39m - org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter  - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field s3Client in com.company.service.StorageService required a bean of type 'com.amazonaws.services.s3.AmazonS3' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.amazonaws.services.s3.AmazonS3' in your configuration.
+
+2022-12-03 11:58:05 [34mINFO [0;39m - com.company.Building2Application  - Starting Building2Application using Java 17.0.2 on DESKTOP-2SB376K with PID 12856 (A:\JAVA OWNER PROJECT\Building2\target\classes started by hasan in A:\JAVA OWNER PROJECT\Building2)
+2022-12-03 11:58:05 [34mINFO [0;39m - com.company.Building2Application  - The following 1 profile is active: "dev"
+2022-12-03 11:58:07 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-03 11:58:07 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+2022-12-03 11:58:07 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8081 (http)
+2022-12-03 11:58:07 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-12-03 11:58:07 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-03 11:58:08 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-12-03 11:58:08 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 2190 ms
+2022-12-03 11:58:08 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-03 11:58:08 [34mINFO [0;39m - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-12-03 11:58:08 [34mINFO [0;39m - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-03 11:58:08 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-12-03 11:58:08 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-12-03 11:58:08 [34mINFO [0;39m - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-12-03 11:58:08 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-12-03 11:58:09 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-03 11:58:09 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:58:10 [31mWARN [0;39m - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-03 11:58:10 [31mWARN [0;39m - org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'storageService': Unsatisfied dependency expressed through field 's3Client'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.amazonaws.services.s3.AmazonS3' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2022-12-03 11:58:10 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 11:58:10 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-12-03 11:58:10 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-12-03 11:58:10 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Stopping service [Tomcat]
+2022-12-03 11:58:10 [34mINFO [0;39m - org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-03 11:58:10 [1;31mERROR[0;39m - org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter  - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field s3Client in com.company.service.StorageService required a bean of type 'com.amazonaws.services.s3.AmazonS3' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.amazonaws.services.s3.AmazonS3' in your configuration.
+
+2022-12-03 12:04:01 [34mINFO [0;39m - com.company.Building2Application  - Starting Building2Application using Java 17.0.2 on DESKTOP-2SB376K with PID 15396 (A:\JAVA OWNER PROJECT\Building2\target\classes started by hasan in A:\JAVA OWNER PROJECT\Building2)
+2022-12-03 12:04:01 [34mINFO [0;39m - com.company.Building2Application  - The following 1 profile is active: "dev"
+2022-12-03 12:04:02 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-03 12:04:03 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+2022-12-03 12:04:03 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8081 (http)
+2022-12-03 12:04:03 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-12-03 12:04:03 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-03 12:04:03 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-12-03 12:04:03 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 1995 ms
+2022-12-03 12:04:04 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-03 12:04:04 [34mINFO [0;39m - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-12-03 12:04:04 [34mINFO [0;39m - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-03 12:04:04 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-12-03 12:04:04 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-12-03 12:04:04 [34mINFO [0;39m - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-12-03 12:04:04 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-12-03 12:04:05 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-03 12:04:05 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 12:04:05 [31mWARN [0;39m - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-03 12:04:05 [31mWARN [0;39m - org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'storageService': Unsatisfied dependency expressed through field 's3Client'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.amazonaws.services.s3.AmazonS3' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2022-12-03 12:04:05 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 12:04:05 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-12-03 12:04:05 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-12-03 12:04:06 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Stopping service [Tomcat]
+2022-12-03 12:04:06 [34mINFO [0;39m - org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-03 12:04:06 [1;31mERROR[0;39m - org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter  - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field s3Client in com.company.service.StorageService required a bean of type 'com.amazonaws.services.s3.AmazonS3' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.amazonaws.services.s3.AmazonS3' in your configuration.
+
+2022-12-03 12:05:15 [34mINFO [0;39m - com.company.Building2Application  - Starting Building2Application using Java 17.0.2 on DESKTOP-2SB376K with PID 11224 (A:\JAVA OWNER PROJECT\Building2\target\classes started by hasan in A:\JAVA OWNER PROJECT\Building2)
+2022-12-03 12:05:15 [34mINFO [0;39m - com.company.Building2Application  - The following 1 profile is active: "dev"
+2022-12-03 12:05:17 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-03 12:05:17 [34mINFO [0;39m - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
+2022-12-03 12:05:17 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8081 (http)
+2022-12-03 12:05:17 [34mINFO [0;39m - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-12-03 12:05:17 [34mINFO [0;39m - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-03 12:05:17 [34mINFO [0;39m - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-12-03 12:05:17 [34mINFO [0;39m - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 1915 ms
+2022-12-03 12:05:18 [34mINFO [0;39m - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-03 12:05:18 [34mINFO [0;39m - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-12-03 12:05:18 [34mINFO [0;39m - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-03 12:05:18 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-12-03 12:05:18 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-12-03 12:05:18 [34mINFO [0;39m - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-12-03 12:05:18 [31mWARN [0;39m - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-12-03 12:05:19 [34mINFO [0;39m - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-03 12:05:19 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 12:05:19 [31mWARN [0;39m - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-03 12:05:21 [34mINFO [0;39m - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@50d6af87, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@765eb801, org.springframework.security.web.context.SecurityContextPersistenceFilter@6dde913e, org.springframework.security.web.header.HeaderWriterFilter@eb09112, org.springframework.security.web.authentication.logout.LogoutFilter@749ffdc7, com.company.config.JwtTokenFilter@6f2a1ff0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e2bc241, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71e55e48, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53b9952f, org.springframework.security.web.session.SessionManagementFilter@2dc77962, org.springframework.security.web.access.ExceptionTranslationFilter@202d1424, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@748fa354]
+2022-12-03 12:05:21 [34mINFO [0;39m - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8081 (http) with context path ''
+2022-12-03 12:05:22 [34mINFO [0;39m - com.company.Building2Application  - Started Building2Application in 6.72 seconds (JVM running for 8.009)
+2022-12-03 12:06:25 [34mINFO [0;39m - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-03 12:06:25 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-12-03 12:06:25 [34mINFO [0;39m - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
