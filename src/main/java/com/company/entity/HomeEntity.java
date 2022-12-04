@@ -2,7 +2,9 @@ package com.company.entity;
 
 import com.company.enums.BuildStatus;
 import com.company.enums.HomeStatus;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -13,6 +15,8 @@ import java.time.LocalDateTime;
 @Setter
 @Table
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class HomeEntity {
 
     @Id
@@ -31,7 +35,7 @@ public class HomeEntity {
     private Integer profile_id;
 
     @JoinColumn(name = "profile_id", nullable = false, updatable = false, insertable = false)
-    @OneToMany
+    @ManyToOne
     private ProfileEntity profile;
 
     @Column(name = "home_status")
@@ -63,4 +67,7 @@ public class HomeEntity {
     @Enumerated(value = EnumType.STRING)
     private BuildStatus buildStatus;
 
+    public HomeEntity(String uuid) {
+        this.uuid = uuid;
+    }
 }

@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-@Table(name = "article_tag")
+@Table(name = "home_tag")
 public class HomeTagEntity {
 
     @Id
@@ -24,7 +24,7 @@ public class HomeTagEntity {
     @ManyToOne(targetEntity = TagEntity.class)
     private TagEntity tag;
 
-    @JoinColumn(name = "article_id", nullable = false)
+    @JoinColumn(name = "home_id", nullable = false)
     @OneToOne(targetEntity = HomeEntity.class)
     private HomeEntity home;
 

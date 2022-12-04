@@ -4,5 +4,5 @@ public enum ProfileRole {
 
     ADMIN,
     CUSTOMER,
-    EMPLOYEE
+    COMPANY
 }

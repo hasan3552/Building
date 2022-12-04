@@ -2,10 +2,7 @@ package com.company.entity;
 
 import com.company.enums.ProfileRole;
 import com.company.enums.ProfileStatus;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-import org.hibernate.annotations.GenericGenerator;
+import lombok.*;
 
 
 import javax.persistence.*;
@@ -17,6 +14,8 @@ import java.time.LocalDateTime;
 @ToString
 @Entity
 @Table(name = "profile")
+@AllArgsConstructor
+@NoArgsConstructor
 public class ProfileEntity {
 
     @Id
@@ -53,4 +52,7 @@ public class ProfileEntity {
     @Column(nullable = false, name = "created_date")
     private LocalDateTime createdDate = LocalDateTime.now();
 
+    public ProfileEntity(Integer id) {
+        this.id = id;
+    }
 }

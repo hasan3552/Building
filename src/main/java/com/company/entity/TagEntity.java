@@ -1,6 +1,5 @@
 package com.company.entity;
 
-import com.company.enums.TagStatus;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -24,7 +23,7 @@ public class TagEntity {
 
     @Column
     @Enumerated(EnumType.STRING)
-    private TagStatus status = TagStatus.ACTIVE;
+    private com.company.enums.TagStatus status = com.company.enums.TagStatus.ACTIVE;
 
     @Column(nullable = false, name = "created_date")
     private LocalDateTime createdDate = LocalDateTime.now();

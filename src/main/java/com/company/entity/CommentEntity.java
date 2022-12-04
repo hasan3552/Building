@@ -1,7 +1,6 @@
 package com.company.entity;
 
 import com.company.enums.CommentStatus;
-import com.company.enums.LikeStatus;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -30,7 +29,7 @@ public class CommentEntity {
     @ManyToOne(targetEntity = ProfileEntity.class, fetch = FetchType.LAZY)
     private ProfileEntity profile;
 
-    @JoinColumn(nullable = false, name = "article_id")
+    @JoinColumn(nullable = false, name = "home_id")
     @ManyToOne(targetEntity = HomeEntity.class, fetch = FetchType.LAZY)
     private HomeEntity home;
 

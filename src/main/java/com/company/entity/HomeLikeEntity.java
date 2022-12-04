@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-@Table(name = "article_like")
+@Table(name = "home_like")
 public class HomeLikeEntity {
 
     @Id
@@ -24,7 +24,7 @@ public class HomeLikeEntity {
     @OneToOne(targetEntity = ProfileEntity.class, fetch = FetchType.LAZY)
     private ProfileEntity profile;
 
-    @JoinColumn(name = "article_id", nullable = false)
+    @JoinColumn(name = "home_id", nullable = false)
     @OneToOne(targetEntity = HomeEntity.class, fetch = FetchType.LAZY)
     private HomeEntity home;
 
