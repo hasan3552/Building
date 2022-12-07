@@ -1,0 +1,29 @@
+GET localhost:8081/home/public/pagination?page=0&size=5
+
+###
+
+POST http://localhost:8081/home/comp/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzAzMjkyMTEsImV4cCI6MTY3MDQxNTYxMSwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjoxfQ.Ehp8P5ZNSoVXFIZFQgyB2lbaOX_hqxHMYR1PB8zj2Uw
+
+{
+  "paymentTypesId" : [{"defaultCash":23,
+                       "paymentTerm":23.3,
+                       "paymentCash":21.21,
+                       "duration":12},
+                       {"defaultCash":230,
+                        "paymentTerm":21.3,
+                        "paymentCash":2.21,
+                        "duration":18}],
+  "attachesId" : ["8a8a83d184e78a630184e78a7d9f0000","8a8a83d184e78a630184e78aa92b0001"],
+  "content": "sdadasadasdasdasdadadsadadasd dssdsd sd  sd ssd s",
+  "phoneNumber": "+99043123456",
+  "area": 54,
+  "summa": 33000,
+  "countRoom": 2,
+  "floor": 4,
+  "totalFloor": 9,
+  "buildStatus": "LEVEL3"
+}
+
+###

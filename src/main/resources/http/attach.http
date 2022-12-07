@@ -1,0 +1,24 @@
+POST http://localhost:8081/attach/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzAzMjkyMTEsImV4cCI6MTY3MDQxNTYxMSwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjoxfQ.Ehp8P5ZNSoVXFIZFQgyB2lbaOX_hqxHMYR1PB8zj2Uw
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="download.jfif"
+
+< C:\Users\hasan\OneDrive\Desktop\download.jfif
+
+###
+GET http://localhost:8080/attach/open?fileId=4028abcd8185de72018185e268460000
+
+###
+GET http://localhost:8080/attach/open/4028abcd8185de72018185e268460000
+
+###
+
+DELETE http://localhost:8080/attach/deleted?fileId=4028abcd8185de72018185e268460000
+
+###
+
+GET http://localhost:8080/attach/pagination?page=1&size=2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTYwNTg1NTUsImV4cCI6MTY1NjE0NDk1NSwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjoyLCJyb2xlIjoiQURNSU4ifQ.geD57-Yuxxx3-eghRb_RcY0H604CuFwuY4H2RwXifWM

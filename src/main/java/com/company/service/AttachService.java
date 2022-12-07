@@ -147,7 +147,7 @@ public class AttachService {
         attachRepository.delete(attach);
     }
 
-    private AttachEntity attachSaveFilesAndDB(MultipartFile file) {
+    public AttachEntity attachSaveFilesAndDB(MultipartFile file) {
 
         File folder = new File(attachFolder + getYmDString());
 
@@ -156,6 +156,7 @@ public class AttachService {
         attach.setOriginalName(getOriginalName(file));
         attach.setSize(file.getSize());
         attach.setPath(getYmDString());
+        attach.setFileName(file.getName());
         attachRepository.save(attach);
 
         String fileName = attach.getUuid() + "." + getExtension(file.getOriginalFilename());

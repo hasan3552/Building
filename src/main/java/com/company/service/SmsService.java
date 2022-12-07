@@ -1,5 +1,7 @@
 package com.company.service;
 
+import com.company.dto.SmsRequestDTO;
+import com.company.dto.SmsResponseDTO;
 import com.company.entity.SmsEntity;
 import com.company.exp.ItemNotFoundException;
 import com.company.repository.SmsRepository;
@@ -32,18 +34,17 @@ public class SmsService {
 //    @Autowired
 //    private RestTemplate restTemplate;
 
-
     public void sendRegistrationSms(String phone) {
         String code = RandomUtil.getRandomSmsCode();
-        String message = "Sharq Gilamlari partali uchun\n registratsiya kodi: " + code;
+        String message = "Yangi uylar mobile ilovasi uchun\n registratsiya kodi: " + code;
 
-//        SmsResponseDTO responseDTO = send(phone, message);
-//
+        SmsResponseDTO responseDTO = send(phone, message);
+
         SmsEntity entity = new SmsEntity();
-//        entity.setPhone(phone);
-//        entity.setCode(code);
-//        entity.setStatus(responseDTO.getSuccess());
-//        entity.setStatus(Boolean.FALSE);
+        entity.setPhone(phone);
+        entity.setCode(code);
+        entity.setStatus(responseDTO.getSuccess());
+        entity.setStatus(Boolean.FALSE);
 
         smsRepository.save(entity);
     }
@@ -59,21 +60,22 @@ public class SmsService {
         return sms.getCode().equals(code) && validDate.isAfter(LocalDateTime.now());
     }
 
-//    private SmsResponseDTO send(String phone, String message) {
-//        SmsRequestDTO requestDTO = new SmsRequestDTO();
-//        requestDTO.setKey(smsKey);
-//        requestDTO.setPhone(phone);
-//        requestDTO.setMessage(message);
-//        System.out.println("Sms Request: message " + message);
-//
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.setContentType(MediaType.APPLICATION_JSON);
-//        HttpEntity<SmsRequestDTO> entity = new HttpEntity<>(requestDTO, headers);
-//
-//        SmsResponseDTO response = restTemplate.postForObject(smsUrl, entity, SmsResponseDTO.class);
-//        System.out.println("Sms Response  " + response);
-//        return response;
-//    }
+    private SmsResponseDTO send(String phone, String message) {
+        SmsRequestDTO requestDTO = new SmsRequestDTO();
+        requestDTO.setKey(smsKey);
+        requestDTO.setPhone(phone);
+        requestDTO.setMessage(message);
+     //   System.out.println("Sms Request: message " + message);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        HttpEntity<SmsRequestDTO> entity = new HttpEntity<>(requestDTO, headers);
+
+     //   SmsResponseDTO response = restTemplate.postForObject(smsUrl, entity, SmsResponseDTO.class);
+     // System.out.println("Sms Response  " + response);
+     //   return response;
+        return null;
+    }
 
     public SmsEntity getSmsByPhone(String phone) {
         Optional<SmsEntity> optional = smsRepository.findTopByPhoneOrderByCreatedDateDesc(phone);

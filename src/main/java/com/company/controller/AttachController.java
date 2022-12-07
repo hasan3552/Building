@@ -2,6 +2,7 @@ package com.company.controller;
 
 import com.company.dto.ResponseDTO;
 import com.company.dto.attach.AttachDTO;
+import com.company.entity.AttachEntity;
 import com.company.service.AttachService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -20,14 +21,12 @@ public class AttachController {
     @Autowired
     private AttachService attachService;
 
-//    @PostMapping("/upload")
-//    public ResponseEntity<?> upload(@RequestParam("file") MultipartFile file,
-//                                         HttpServletRequest request) {
-//
-//        Integer profileId = HttpHeaderUtil.getId(request);
-//        AttachDTO dto = attachService.saveToSystem(file, profileId);
-//        return ResponseEntity.ok().body(dto);
-//    }d
+    @PostMapping("/upload")
+    public ResponseEntity<?> upload(@RequestParam("file") MultipartFile file) {
+
+        AttachEntity entity = attachService.attachSaveFilesAndDB(file);
+        return ResponseEntity.ok().body(entity.getUuid());
+    }
 
 //  ---------------------------  POST  ---------------------------------------
     @PostMapping("/upload/profile")
@@ -42,7 +41,6 @@ public class AttachController {
     public byte[] open_general(@RequestParam("fileId") String fileUUID) {
         return attachService.openGeneral(fileUUID);
     }
-
 
     @GetMapping(value = "/open/{fileId}", produces = MediaType.IMAGE_PNG_VALUE)
     public byte[] open(@PathVariable("fileId") String fileName) {
@@ -87,6 +85,7 @@ public class AttachController {
 
         return ResponseEntity.ok(response);
     }
+
     // -----------------------  PAGINATION  ----------------------------------------
     @GetMapping("/adm/pagination")
     public ResponseEntity<?> pagination(@RequestParam("page") Integer page,

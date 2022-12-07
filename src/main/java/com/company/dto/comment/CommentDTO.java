@@ -1,6 +1,6 @@
 package com.company.dto.comment;
 
-import com.company.dto.HomeFULLDTO;
+import com.company.dto.home.HomeFULLDTO;
 import com.company.dto.profile.ProfileDTO;
 import lombok.Getter;
 import lombok.Setter;

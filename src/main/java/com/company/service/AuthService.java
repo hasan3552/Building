@@ -103,16 +103,13 @@ public class AuthService {
 
             sms.setRequestCount(sms.getRequestCount() + 1);
             smsService.save(sms);
-
             return "Code Invalid";
         }
         if (validDate.isBefore(LocalDateTime.now())) {
-
             return "Time is out";
         }
 
         if (sms.getRequestCount() > 4) {
-
             return "exceeded the limit";
 
         }

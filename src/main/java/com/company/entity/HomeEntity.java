@@ -22,8 +22,8 @@ public class HomeEntity {
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
-    @Column(name = "uuid", unique = true)
-    private String uuid;
+    @Column(name = "id", unique = true)
+    private String id;
 
     @Column(name = "content")
     private String content;
@@ -68,6 +68,6 @@ public class HomeEntity {
     private BuildStatus buildStatus;
 
     public HomeEntity(String uuid) {
-        this.uuid = uuid;
+        this.id = uuid;
     }
 }

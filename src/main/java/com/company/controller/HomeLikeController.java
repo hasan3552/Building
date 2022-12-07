@@ -1,6 +1,6 @@
 package com.company.controller;
 
-import com.company.dto.HomeLikeCreateDTO;
+import com.company.dto.home.HomeLikeCreateDTO;
 import com.company.service.HomeLikeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

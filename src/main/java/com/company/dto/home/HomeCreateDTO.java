@@ -1,7 +1,6 @@
-package com.company.dto;
+package com.company.dto.home;
 
 import com.company.dto.profile.ProfileShortDTO;
-import com.company.entity.PaymentTypeEntity;
 import com.company.enums.BuildStatus;
 import com.company.enums.HomeStatus;
 import lombok.Getter;
@@ -12,23 +11,19 @@ import java.util.List;
 
 @Getter
 @Setter
-public class HomeFULLDTO {
+public class HomeCreateDTO {
 
-    private String uuid;
+    private Integer locationId;
+    private List<PaymentCreateDTO> paymentTypesId;
+    private List<String> attachesId;
     private String content;
     private String phoneNumber;
-    private ProfileShortDTO profile;
-    private HomeStatus status;
-    private Boolean visible;
-    private LocalDateTime createdDate ;
+// profileId security
     private Double area;
     private Double summa;
     private Integer countRoom;
     private Integer floor;
     private Integer totalFloor;
     private BuildStatus buildStatus;
-    private List<PaymentShortDTO> paymentTypeDTOS;
-
-
 
 }

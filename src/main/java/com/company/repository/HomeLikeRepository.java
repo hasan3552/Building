@@ -15,12 +15,12 @@ public interface HomeLikeRepository extends CrudRepository<HomeLikeEntity, Integ
 
     Optional<HomeLikeEntity> findByHomeAndProfile(HomeLikeEntity homeLike, ProfileEntity profile);
 
-    @Query("FROM HomeLikeEntity a where  a.home.uuid =:homeId and a.profile.id =:profileId")
+    @Query("FROM HomeLikeEntity a where  a.home.id =:homeId and a.profile.id =:profileId")
     Optional<HomeLikeEntity> findExists(String homeId, Integer profileId);
 
     @Transactional
     @Modifying
-    @Query("DELETE FROM HomeLikeEntity a where  a.home.uuid =:homeId and a.profile.id =:profileId")
+    @Query("DELETE FROM HomeLikeEntity a where  a.home.id =:homeId and a.profile.id =:profileId")
     void delete(String homeId, Integer profileId);
 
 

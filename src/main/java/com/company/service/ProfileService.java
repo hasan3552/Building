@@ -17,6 +17,7 @@ import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 //
 //import javax.annotation.PostConstruct;
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -194,7 +195,7 @@ public class ProfileService {
         return dto;
     }
 
- //   @PostConstruct
+   @PostConstruct
     private void setDefaultUsers() {
         if (profileRepository.count() == 0) {
             ProfileEntity user = new ProfileEntity();
