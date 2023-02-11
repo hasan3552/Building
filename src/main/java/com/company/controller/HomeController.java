@@ -38,7 +38,11 @@ public class HomeController {
         return ResponseEntity.ok(responseDTO);
     }
 
+    @DeleteMapping("/comp")
+    public ResponseEntity<?> deleted(@RequestParam("id") String id){
 
-
+        ResponseDTO deleted = homeService.deleted(id);
+        return ResponseEntity.ok(deleted);
+    }
 
 }

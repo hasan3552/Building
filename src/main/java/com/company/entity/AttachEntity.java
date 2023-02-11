@@ -36,7 +36,7 @@ public class AttachEntity {
     @Column(name = "path", nullable = false)
     private String path;
 
-    @Column(name = "file_name", nullable = false)
+    @Column(name = "file_name", nullable = false, unique = true)
     private String fileName;
 
     @Column(nullable = false, name = "created_date")

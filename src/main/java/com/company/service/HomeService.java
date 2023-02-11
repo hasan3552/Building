@@ -5,8 +5,11 @@ import com.company.dto.ResponseDTO;
 import com.company.dto.home.HomeCreateDTO;
 import com.company.dto.home.HomeShortDTO;
 import com.company.entity.HomeEntity;
+import com.company.entity.ProfileEntity;
 import com.company.enums.HomeStatus;
+import com.company.enums.ProfileRole;
 import com.company.exp.ItemNotFoundException;
+import com.company.exp.NoPermissionException;
 import com.company.repository.HomeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
@@ -15,6 +18,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class HomeService {
@@ -58,7 +62,7 @@ public class HomeService {
     }
 
     public HomeEntity get(String uuid) {
-        return homeRepository.findById(uuid).orElseThrow(() -> {
+        return homeRepository.findByIdAndStatus(uuid, Boolean.TRUE).orElseThrow(() -> {
             throw new ItemNotFoundException("Item not found");
         });
     }
@@ -123,6 +127,18 @@ public class HomeService {
         homeAttachService.create(entity.getId(), dto.getAttachesId());
         paymentService.create(entity.getId(), dto.getPaymentTypesId());
 
+        return new ResponseDTO(1, "success");
+    }
+
+    public ResponseDTO deleted(String id) {
+
+        ProfileEntity profile = profileService.getProfile();
+        String id1 = homeRepository.getHomeIdByProfileId(profile.getId());
+        if (profile.getRole() != ProfileRole.ADMIN && !id1.equals(id)) {
+            throw new NoPermissionException("No Access");
+        }
+
+        homeRepository.deletedHome(id);
         return new ResponseDTO(1, "success");
     }
 }

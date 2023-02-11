@@ -4,7 +4,7 @@ GET localhost:8081/home/public/pagination?page=0&size=5
 
 POST http://localhost:8081/home/comp/create
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzAzMjkyMTEsImV4cCI6MTY3MDQxNTYxMSwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjoxfQ.Ehp8P5ZNSoVXFIZFQgyB2lbaOX_hqxHMYR1PB8zj2Uw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzA3NDc3NTYsImV4cCI6MTY3MDgzNDE1NiwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjoxfQ.WqynwlTGFojKqN_MvsXTAm-_QPmA0kCBwuzWLFlPtAk
 
 {
   "paymentTypesId" : [{"defaultCash":23,
@@ -15,7 +15,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzAzMjkyMTEsImV4cCI6MTY3M
                         "paymentTerm":21.3,
                         "paymentCash":2.21,
                         "duration":18}],
-  "attachesId" : ["8a8a83d184e78a630184e78a7d9f0000","8a8a83d184e78a630184e78aa92b0001"],
+  "attachesId" : ["8a8a833984fb89e60184fb90f4690000","8a8a83d184f61a080184f61cd3480000"],
   "content": "sdadasadasdasdasdadadsadadasd dssdsd sd  sd ssd s",
   "phoneNumber": "+99043123456",
   "area": 54,
@@ -27,3 +27,5 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzAzMjkyMTEsImV4cCI6MTY3M
 }
 
 ###
+DELETE http://localhost:8081/home/comp?id=8a8a83398500530501850054ea020001
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NzA3NDc3NTYsImV4cCI6MTY3MDgzNDE1NiwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjoxfQ.WqynwlTGFojKqN_MvsXTAm-_QPmA0kCBwuzWLFlPtAk

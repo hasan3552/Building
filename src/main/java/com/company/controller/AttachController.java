@@ -24,22 +24,22 @@ public class AttachController {
     @PostMapping("/upload")
     public ResponseEntity<?> upload(@RequestParam("file") MultipartFile file) {
 
-        AttachEntity entity = attachService.attachSaveFilesAndDB(file);
-        return ResponseEntity.ok().body(entity.getUuid());
+        AttachDTO dto = attachService.saveToAmazonAndDB(file);
+        return ResponseEntity.ok().body(dto.getId());
     }
 
 //  ---------------------------  POST  ---------------------------------------
     @PostMapping("/upload/profile")
     public ResponseEntity<?> uploadProfile(@RequestParam("file") MultipartFile file) {
 
-        AttachDTO dto = attachService.saveToSystemForProfile(file);
+        AttachDTO dto = attachService.saveToAmazonAndDBForProfile(file);
         return ResponseEntity.ok().body(dto);
     }
 
     //  -------------------------  GET  ---------------------------------------
     @GetMapping(value = "/open", produces = MediaType.ALL_VALUE)
     public byte[] open_general(@RequestParam("fileId") String fileUUID) {
-        return attachService.openGeneral(fileUUID);
+        return attachService.loadImage(fileUUID);
     }
 
     @GetMapping(value = "/open/{fileId}", produces = MediaType.IMAGE_PNG_VALUE)
@@ -58,12 +58,10 @@ public class AttachController {
     @GetMapping("/download")
     public ResponseEntity<Resource> download(@RequestParam("fileId") String fileId) {
 
-        Resource file = attachService.download(fileId);
+        Resource file = attachService.downloadAWS(fileId);
         return ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION,
                 "attachment; filename=\"" + file.getFilename() + "\"").body(file);
-
     }
-
     //    @GetMapping(value = "/open/{fileId}", produces = MediaType.IMAGE_PNG_VALUE)
 //    public byte[] open(@PathVariable("fileId") String fileName) {
 //        if (fileName != null && fileName.length() > 0) {
@@ -82,8 +80,8 @@ public class AttachController {
     public ResponseEntity<?> deletedProfile() {
 
         ResponseDTO response = attachService.deletedProfile();
-
         return ResponseEntity.ok(response);
+
     }
 
     // -----------------------  PAGINATION  ----------------------------------------

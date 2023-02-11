@@ -23,44 +23,44 @@ public class StorageService {
     @Value("${application.bucket.name}")
     private String bucket;
 
-//    @Autowired
-//    private AmazonS3 s3Client;
+    @Autowired
+    private AmazonS3 s3Client;
 
-//    public String fileUpload(MultipartFile multipartFile) {
-//        File fileObj = convertMFileToFile(multipartFile);
-//        String fileName = System.currentTimeMillis() + "_" + multipartFile.getOriginalFilename();
-//        s3Client.putObject(new PutObjectRequest(bucket, fileName, fileObj));
-//        System.out.println("fileName: " + fileName);
-//        fileObj.delete();
-//        return fileName;
-//    }
-//
-//    public byte[] download(String fileName) {
-//        S3Object s3Object = s3Client.getObject(bucket, fileName);
-//        S3ObjectInputStream inputStream = s3Object.getObjectContent();
-//        try {
-//            byte[] content = IOUtils.toByteArray(inputStream);
-//            return content;
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return null;
-//    }
-//
-//    public String deleteFile(String fileName) {
-//        s3Client.deleteObject(bucket, fileName);
-//        return fileName + ": removed";
-//    }
-//
-//    private File convertMFileToFile(MultipartFile multipartFile) {
-//        File convertFile = new File(multipartFile.getOriginalFilename());
-//        try (FileOutputStream fos = new FileOutputStream(convertFile)) {
-//            fos.write(multipartFile.getBytes());
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            log.error("Error converting mFile to file");
-//        }
-//        return convertFile;
-//    }
+    public String fileUpload(MultipartFile multipartFile) {
+        File fileObj = convertMFileToFile(multipartFile);
+        String fileName = System.currentTimeMillis() + "_" + multipartFile.getOriginalFilename();
+        s3Client.putObject(new PutObjectRequest(bucket, fileName, fileObj));
+        System.out.println("fileName: " + fileName);
+        fileObj.delete();
+        return fileName;
+    }
+
+    public byte[] download(String fileName) {
+        S3Object s3Object = s3Client.getObject(bucket, fileName);
+        S3ObjectInputStream inputStream = s3Object.getObjectContent();
+        try {
+            byte[] content = IOUtils.toByteArray(inputStream);
+            return content;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public String deleteFile(String fileName) {
+        s3Client.deleteObject(bucket, fileName);
+        return fileName + ": removed";
+    }
+
+    private File convertMFileToFile(MultipartFile multipartFile) {
+        File convertFile = new File(multipartFile.getOriginalFilename());
+        try (FileOutputStream fos = new FileOutputStream(convertFile)) {
+            fos.write(multipartFile.getBytes());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            log.error("Error converting mFile to file");
+        }
+        return convertFile;
+    }
 }

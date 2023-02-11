@@ -45,7 +45,10 @@ public class ProfileEntity {
     @Column(nullable = false)
     private Boolean visible = true;
 
-    @JoinColumn(name = "attach_id")
+    @Column(name = "attach_id")
+    private String attachId;
+
+    @JoinColumn(name = "attach_id", updatable = false, insertable = false)
     @OneToOne(fetch = FetchType.EAGER)
     private AttachEntity photo;
 

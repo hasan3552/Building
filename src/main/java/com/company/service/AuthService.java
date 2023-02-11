@@ -17,6 +17,7 @@ import com.company.util.JwtUtil;
 import com.company.util.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -35,6 +36,9 @@ public class AuthService {
     private AuthenticationManager authenticationManager;
     @Autowired
     private SmsService smsService;
+    @Autowired
+    @Lazy
+    private AttachService attachService;
 
     public ProfileLoginResponseDTO login(AuthDTO authDTO) {
 
@@ -50,7 +54,7 @@ public class AuthService {
         dto.setJwt(JwtUtil.encode(profile.getId()));
         dto.setRole(profile.getRole());
         if (profile.getPhoto() != null) {
-            dto.setUrl(serverUrl + "attach/open?fileId=" + profile.getPhoto().getUuid());
+            dto.setUrl(attachService.openUrl(profile.getAttachId()));
         }
 
         return dto;

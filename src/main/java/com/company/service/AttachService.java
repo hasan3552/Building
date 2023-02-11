@@ -16,11 +16,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.net.MalformedURLException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
@@ -37,41 +34,8 @@ public class AttachService {
     private ProfileService profileService;
     @Autowired
     private AttachRepository attachRepository;
-
-    public byte[] openGeneral(String fileUUID) {
-        AttachEntity attach = get(fileUUID);
-
-        byte[] data;
-        try {
-            // fileName -> zari.jpg
-            String path = "attaches/" + attach.getPath() + "/" + fileUUID + "." + attach.getExtension();
-            Path file = Paths.get(path);
-            data = Files.readAllBytes(file);
-            return data;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return new byte[0];
-    }
-
-    public Resource download(String fileUUID) {
-
-        AttachEntity attach = get(fileUUID);
-        try {
-
-            String path = "attaches/" + attach.getPath() + "/" + fileUUID + "." + attach.getExtension();
-            Path file = Paths.get(path);
-            Resource resource = new UrlResource(file.toUri());
-
-            if (resource.exists() || resource.isReadable()) {
-                return resource;
-            } else {
-                throw new RuntimeException("Could not read the file!");
-            }
-        } catch (MalformedURLException e) {
-            throw new RuntimeException("Error: " + e.getMessage());
-        }
-    }
+    @Autowired
+    private StorageService storageService;
 
     public String getExtension(String fileName) { // mp3/jpg/npg/mp4.....
         int lastIndex = fileName.lastIndexOf(".");
@@ -108,72 +72,13 @@ public class AttachService {
             dto.setId(attach.getUuid());
             dto.setUrl(serverUrl + "attach/open?fileId=" + attach.getUuid());
             dto.setOriginalName(attach.getOriginalName());
-            dto.setPath(attach.getPath());
+            dto.setFileName(attach.getFileName());
             dtoList.add(dto);
         });
 
         return new PageImpl(dtoList, pageable, all.getTotalElements());
     }
 
-    public AttachDTO saveToSystemForProfile(MultipartFile file) {
-
-        ProfileEntity profile = profileService.getProfile();
-
-        AttachEntity attach = attachSaveFilesAndDB(file);
-        AttachEntity oldAttach = null;
-        if (profile.getPhoto() != null) {
-            oldAttach = profile.getPhoto();
-        }
-
-        profile.setPhoto(attach);
-        profileService.save(profile);
-
-        if (oldAttach != null) {
-            deletedFilesAndDB(oldAttach);
-        }
-
-        AttachDTO dto = new AttachDTO();
-        dto.setUrl(serverUrl + "attach/open/" + attach.getUuid());
-        return dto;
-    }
-
-    private void deletedFilesAndDB(AttachEntity attach) {
-        try {
-            Files.delete(Path.of(attachFolder + attach.getPath() + "/" + attach.getUuid() +
-                    "." + attach.getExtension()));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        attachRepository.delete(attach);
-    }
-
-    public AttachEntity attachSaveFilesAndDB(MultipartFile file) {
-
-        File folder = new File(attachFolder + getYmDString());
-
-        AttachEntity attach = new AttachEntity();
-        attach.setExtension(getExtension(file.getOriginalFilename()));
-        attach.setOriginalName(getOriginalName(file));
-        attach.setSize(file.getSize());
-        attach.setPath(getYmDString());
-        attach.setFileName(file.getName());
-        attachRepository.save(attach);
-
-        String fileName = attach.getUuid() + "." + getExtension(file.getOriginalFilename());
-        if (!folder.exists()) {
-            folder.mkdirs();
-        }
-
-        byte[] bytes;
-        try {
-            bytes = file.getBytes();
-            Path path = Paths.get(attachFolder + getYmDString() + "/" + fileName);
-            Files.write(path, bytes);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        return attach;
-    }
 
     private String getOriginalName(MultipartFile file) {
         return file.getOriginalFilename()
@@ -190,40 +95,97 @@ public class AttachService {
         AttachEntity attach = profile.getPhoto();
 
         if (attach != null) {
-            profile.setPhoto(null);
+            profile.setAttachId(null);
             profileService.save(profile);
-            deletedFilesAndDB(attach);
+            deletedAmazonAndDB(attach);
         }
 
         return new ResponseDTO(1, "success changeVisible");
     }
 
-    public byte[] loadImage(String fileId) {
-        byte[] imageInByte;
-
-        Optional<AttachEntity> optional = attachRepository.findById(fileId);
-        if (optional.isEmpty()) {
-            throw new ItemNotFoundException("Attach not found");
-        }
-
-        AttachEntity attach = optional.get();
-        BufferedImage originalImage;
-        try {
-            originalImage = ImageIO.read(new File("attaches/" + attach.getPath() + "/"
-                    + attach.getUuid() + "." + attach.getExtension()));
-        } catch (Exception e) {
-            return new byte[0];
-        }
-
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        try {
-            ImageIO.write(originalImage, attach.getExtension(), baos);
-            baos.flush();
-            imageInByte = baos.toByteArray();
-            baos.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        return imageInByte;
+    private void deletedAmazonAndDB(AttachEntity attach) {
+        attachRepository.delete(attach);
+        storageService.deleteFile(attach.getFileName());
     }
+
+    public byte[] loadImage(String fileId) {
+        AttachEntity attach = get(fileId);
+        String fileName = attach.getFileName();
+
+        return storageService.download(fileName);
+    }
+
+    public String saveAmazonS3(MultipartFile file) {
+        return storageService.fileUpload(file);
+    }
+
+    public String saveDB(String fileName, MultipartFile file) {
+
+        AttachEntity attach = new AttachEntity();
+        attach.setExtension(getExtension(file.getOriginalFilename()));
+        attach.setOriginalName(getOriginalName(file));
+        attach.setSize(file.getSize());
+        attach.setPath(getYmDString());
+        attach.setFileName(fileName);
+        attachRepository.save(attach);
+
+        return attach.getUuid();
+    }
+
+    public AttachDTO saveToAmazonAndDB(MultipartFile file) {
+        String fileName = saveAmazonS3(file);
+        String attachId = saveDB(fileName, file);
+
+        return new AttachDTO(attachId, fileName);
+    }
+
+    public byte[] inputStream(AttachEntity attach) {
+        byte[] buffer = storageService.download(attach.getFileName());
+
+        return buffer;
+    }
+
+    public Resource downloadAWS(String attachId) {
+
+        AttachEntity attach = get(attachId);
+        byte[] buffer = inputStream(attach);
+
+        File targetFile = new File("src/main/resources/" + attach.getFileName());
+        try (OutputStream outStream = new FileOutputStream(targetFile)) {
+            outStream.write(buffer);
+            outStream.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            Path file = Paths.get(targetFile.getPath());
+            Resource resource = new UrlResource(file.toUri());
+
+            if (resource.exists() && resource.isReadable()) {
+                return resource;
+            } else {
+                throw new RuntimeException("Could not read the file!");
+            }
+        } catch (MalformedURLException e) {
+            throw new RuntimeException("Error: " + e.getMessage());
+        }
+    }
+
+    public AttachDTO saveToAmazonAndDBForProfile(MultipartFile file) {
+
+        AttachDTO dto = saveToAmazonAndDB(file);
+        ProfileEntity profile = profileService.getProfile();
+        AttachEntity photo = profile.getPhoto();
+        profile.setAttachId(dto.getId());
+        profileService.save(profile);
+        if(photo != null){
+            deletedAmazonAndDB(photo);
+        }
+
+        return new AttachDTO(profile.getAttachId(), dto.getFileName());
+    }
+
 }
